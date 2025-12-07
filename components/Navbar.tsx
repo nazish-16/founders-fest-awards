@@ -23,10 +23,6 @@ export function NavbarDemo() {
       link: "https://foundersfest.org/about",
     },
     {
-      name: "Participate",
-      link: "https://foundersfest.org/participate",
-    },
-    {
       name: "Awards",
       link: "https://foundersfest.org/awards",
     },

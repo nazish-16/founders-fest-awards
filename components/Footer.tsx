@@ -42,14 +42,17 @@ const Footer = () => {
           </Link>
         </div>
         <div className="flex items-center gap-2 mt-4">
-          <Image
-            src="/assets/logo.png"
-            alt="Logo 1"
-            width={80}
-            height={80}
-            className="opacity-90 hover:opacity-100 transition"
-          />
+          <Link href="https://foundersfest.org" target="_blank">
+            <Image
+              src="/assets/logo.png"
+              alt="Logo 1"
+              width={80}
+              height={80}
+              className="opacity-90 hover:opacity-100 transition"
+            />
+          </Link>
           <span className="text-neutral-500 text-3xl font-light">|</span>
+          <Link href="https://edventurepark.com/" target="_blank">
           <Image
             src="/assets/logo2.png"
             alt="Logo 2"
@@ -57,6 +60,7 @@ const Footer = () => {
             height={80}
             className="opacity-90 hover:opacity-100 transition"
           />
+          </Link>
         </div>
       </div>
     </footer>
