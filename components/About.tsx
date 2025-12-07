@@ -353,7 +353,7 @@ const About = () => {
             variants={fadeUp}
             className="rounded-2xl border border-dashed border-yellow-400/60 bg-yellow-400/10 px-6 py-6 backdrop-blur-md"
           >
-            <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-yellow-300">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.1rem] text-yellow-300">
               Built for the doers
             </h3>
             <p className="mt-3 text-sm md:text-base text-neutral-100">
