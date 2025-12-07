@@ -33,8 +33,8 @@ const CTA = () => {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
           className="mt-6 text-3xl md:text-5xl font-bold leading-tight"
         >
-          Be part of the <br />{" "}
-          <span className="text-yellow-300">Founders Fest Awards 2025.</span>.
+          Be part of the<br />{" "}
+          <span className="text-yellow-300">Founders Fest Awards.</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 18 }}
