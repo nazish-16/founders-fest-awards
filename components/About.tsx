@@ -103,7 +103,7 @@ const About = () => {
           variants={staggerContainer}
         >
           <motion.span
-            className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.2em] text-white/60 backdrop-blur-sm"
+            className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.1em] text-white/60 backdrop-blur-sm"
             variants={fadeUp}
           >
             Founders Fest Awards 2025
@@ -174,7 +174,7 @@ const About = () => {
             transition={{ type: "spring", stiffness: 140, damping: 16 }}
             className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md"
           >
-            <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-yellow-300">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.1rem] text-yellow-300">
               Snapshot
             </h3>
             <p className="mt-3 text-sm text-neutral-200">

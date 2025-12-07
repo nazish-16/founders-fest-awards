@@ -23,7 +23,7 @@ const CTA = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.2em] text-white/60 backdrop-blur-sm"
+          className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.1em] text-white/60 backdrop-blur-sm"
         >
           Nominations Now Open
         </motion.span>
@@ -33,8 +33,8 @@ const CTA = () => {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
           className="mt-6 text-3xl md:text-5xl font-bold leading-tight"
         >
-          Be part of the first{" "}
-          <span className="text-yellow-300">Founders Fest Awards</span>.
+          Be part of the <br />{" "}
+          <span className="text-yellow-300">Founders Fest Awards 2025.</span>.
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 18 }}
