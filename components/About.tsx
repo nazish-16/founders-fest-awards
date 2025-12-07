@@ -79,7 +79,7 @@ const staggerContainer = {
 
 const About = () => {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-black text-white pt-32 pb-24">
+    <main className="relative min-h-screen overflow-hidden bg-black text-white pb-24">
       {/* soft animated glows */}
       <motion.div
         aria-hidden="true"

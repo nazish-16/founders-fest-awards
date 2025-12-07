@@ -79,7 +79,7 @@ const CTA = () => {
             whileTap={{ scale: 0.97 }}
             className="inline-flex items-center justify-center rounded-full bg-yellow-400 px-8 py-3 text-sm md:text-base font-semibold text-black transition"
           >
-            Nominate Now
+            Nominate
           </motion.a>
           <p className="text-xs md:text-sm text-neutral-400">
             It only takes a few minutes to submit your nomination.{" "}

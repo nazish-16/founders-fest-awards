@@ -104,30 +104,30 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-8xl mx-auto relative w-full flex flex-col md:flex-row md:items-center md:justify-center gap-12 md:gap-16 px-4 md:px-8">
+    <div className="max-w-8xl mx-auto relative w-full flex flex-col xl:flex-row xl:items-center xl:justify-center gap-12 xl:gap-16 px-4 xl:px-8">
       {/* LEFT CONTENT */}
       <motion.div
         initial={{ opacity: 0, x: -24 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="md:max-w-2xl flex-1 flex flex-col justify-center"
+        className="xl:max-w-2xl flex-1 flex flex-col justify-center"
       >
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight whitespace-nowrap">
+        <h1 className="text-4xl xl:text-7xl font-bold text-white leading-tight whitespace-nowrap">
           Founders Fest Awards
         </h1>
-        <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-200">
+        <p className="max-w-2xl text-base xl:text-xl mt-8 text-neutral-200">
           A tribute to the dreamers who build through uncertainty, push through long
           nights, and carry the unshakeable belief that their ideas can shape the
           future.
         </p>
 
-        <p className="max-w-2xl text-base md:text-xl mt-4 text-neutral-300">
+        <p className="max-w-2xl text-base xl:text-xl mt-4 text-neutral-300">
           Founders Fest Awards celebrates the creators and leaders who move the
           ecosystem forward — those who innovate boldly, lead with intention, and
           create meaningful change across India’s growing startup landscape.
         </p>
 
-        <p className="max-w-2xl text-base md:text-xl mt-4 text-neutral-400">
+        <p className="max-w-2xl text-base xl:text-xl mt-4 text-neutral-400">
           This platform shines a light on the builders working behind the scenes,
           turning challenges into breakthroughs, and inspiring the next generation of
           founders to rise.
@@ -135,7 +135,7 @@ export const Header = () => {
       </motion.div>
       
       {/* BIG DIVIDER */}
-      <div className="hidden md:block w-px h-96 bg-linear-to-b from-transparent via-white/30 to-transparent mx-4 shrink-0" />
+      <div className="hidden xl:block w-px h-96 bg-linear-to-b from-transparent via-white/30 to-transparent mx-4 shrink-0" />
       
       {/* RIGHT CONTENT - IMAGES */}
       <motion.div
@@ -150,7 +150,7 @@ export const Header = () => {
             alt="Logo 1"
             width={200}
             height={200}
-            className="h-60 w-60 hidden md:flex md:h-60 md:w-60 object-contain opacity-90 hover:opacity-100 transition"
+            className="h-60 w-60 hidden xl:flex xl:h-60 xl:w-60 object-contain opacity-90 hover:opacity-100 transition"
           />
         </div>
         <div className="flex flex-col items-center">
@@ -159,9 +159,9 @@ export const Header = () => {
             alt="Logo 2"
             width={200}
             height={200}
-            className="h-60 w-60 md:h-60 md:w-60 object-contain opacity-90 hover:opacity-100 transition"
+            className="h-60 w-60 xl:h-60 xl:w-60 object-contain opacity-90 hover:opacity-100 transition"
           />
-          <p className="text-white/90 font-bold text-xs md:hidden uppercase tracking-wider">
+          <p className="text-white/90 font-bold text-xs xl:hidden uppercase tracking-wider">
             BROUGHT TO YOU BY
           </p>
         </div>
