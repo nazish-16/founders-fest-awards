@@ -26,11 +26,53 @@ const categories = [
   "Best creator",
 ];
 
+const groupedCategories = [
+  {
+    label: "Flagship Honours",
+    description: "Recognising standout founders, startups, and ecosystem champions.",
+    items: [
+      "Startup of the Year",
+      "Founder of the Year",
+      "Investor of the Year",
+      "Ecosystem Hero of the Year",
+      "Pride of Hyderabad",
+      "Best creator",
+    ],
+  },
+  {
+    label: "Ecosystem & Support",
+    description: "Celebrating the platforms, spaces, and enablers powering founders.",
+    items: [
+      "Best Accelerator Award",
+      "Best Incubator Award",
+      "Accessibility Innovation Award",
+      "Future Founder Award",
+    ],
+  },
+  {
+    label: "Impact & Innovation",
+    description: "For those building sustainable, inclusive and breakthrough solutions.",
+    items: [
+      "Best Green Tech Startup",
+      "Social Enterprise Startup",
+      "Best AI Innovation",
+      "Best E-commerce Startup",
+      "Creative Startup",
+      "Sustainability Champion Award",
+      "Rural Innovator Award",
+      "Rural Innovation Award",
+      "Social Innovator Award",
+      "Social Innovation Award",
+      "Women-Led Innovation Award",
+    ],
+  },
+];
+
 const steps = [
   {
     step: "01",
     title: "Select Your Category",
-    body: "Choose from 21 award categories celebrating innovation, leadership, creativity, impact, and entrepreneurial excellence across sectors.",
+    body: "Choose from 21 Categories celebrating innovation, leadership, creativity, impact, and entrepreneurial excellence across sectors.",
     meta: "Deadline: 20th Dec, 2025",
   },
   {
@@ -184,6 +226,8 @@ const About = () => {
             </p>
           </motion.div>
         </motion.section>
+
+        {/* egories – NEW LAYOUT */}
         <motion.section
           className="mt-20"
           initial="hidden"
@@ -217,95 +261,112 @@ const About = () => {
             </p>
           </motion.div>
 
+          {/* Grouped award clusters */}
           <motion.div
-            className="mt-8 grid gap-3 md:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+            className="mt-10 grid gap-6 md:grid-cols-3"
             variants={staggerContainer}
           >
-            {categories.map((cat) => (
+            {groupedCategories.map((group) => (
               <motion.div
-                key={cat}
-                className="rounded-xl border hover:bg-gray-600/10 transition-all duration-300 border-white/10 bg-white/5 px-4 py-3 text-sm md:text-base text-neutral-100 backdrop-blur-sm"
+                key={group.label}
                 variants={fadeUp}
                 transition={{
                   type: "spring",
                   stiffness: 170,
                   damping: 18,
                 }}
+                className="rounded-2xl border border-white/10 bg-white/5 hover:bg-[#0d0c0cab] p-5 md:p-6 backdrop-blur-md"
               >
-                {cat}
+                <h3 className="text-sm md:text-base font-semibold uppercase tracking-[0.16em] text-yellow-300">
+                  {group.label}
+                </h3>
+                <p className="mt-3 text-xs md:text-sm text-neutral-200">
+                  {group.description}
+                </p>
+                <ul className="mt-4 space-y-2 text-sm md:text-base text-neutral-100">
+                  {group.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-yellow-400" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </motion.div>
         </motion.section>
+
+        {/* How to Nominate – timeline */}
         <motion.section
-        className="mt-20"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={staggerContainer}
-      >
-        <motion.h2
-          className="text-2xl md:text-3xl font-semibold"
-          variants={fadeUp}
+          className="mt-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={staggerContainer}
         >
-          How to Nominate
-        </motion.h2>
+          <motion.h2
+            className="text-2xl md:text-3xl font-semibold"
+            variants={fadeUp}
+          >
+            How to Nominate
+          </motion.h2>
 
-        <motion.p
-          className="mt-3 max-w-2xl text-sm md:text-base text-neutral-300"
-          variants={fadeUp}
-        >
-          A simple, transparent process to help you share your journey — not
-          just your metrics.
-        </motion.p>
-        <div
-          className="
-            relative mt-10 space-y-8 pl-10
-            before:absolute before:left-5 before:top-0 before:h-full before:w-px
-            before:bg-white/15
-          "
-        >
-          {steps.map((item, index) => (
-            <motion.div
-              key={item.step}
-              variants={fadeUp}
-              className="relative rounded-2xl border border-white/10 bg-white/5 p-6 md:p-7 backdrop-blur-md"
-            >
+          <motion.p
+            className="mt-3 max-w-2xl text-sm md:text-base text-neutral-300"
+            variants={fadeUp}
+          >
+            A simple, transparent process to help you share your journey — not
+            just your metrics.
+          </motion.p>
+          <div
+            className="
+              relative mt-10 space-y-8 pl-10
+              before:absolute before:left-5 before:top-0 before:h-full before:w-px
+              before:bg-white/15
+            "
+          >
+            {steps.map((item, index) => (
               <motion.div
-                className="
-                  absolute -left-7 top-6
-                  flex h-9 w-9 items-center justify-center rounded-full
-                  bg-yellow-400 text-xs font-semibold text-black
-                "
-                animate={{ scale: [1, 1.08, 1] }}
-                transition={{
-                  duration: 2.4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: index * 0.2,
-                }}
+                key={item.step}
+                variants={fadeUp}
+                className="relative rounded-2xl border border-white/10 bg-white/5 p-6 md:p-7 backdrop-blur-md"
               >
-                {item.step}
-              </motion.div>
+                <motion.div
+                  className="
+                    absolute -left-7 top-6
+                    flex h-9 w-9 items-center justify-center rounded-full
+                    bg-yellow-400 text-xs font-semibold text-black
+                  "
+                  animate={{ scale: [1, 1.08, 1] }}
+                  transition={{
+                    duration: 2.4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: index * 0.2,
+                  }}
+                >
+                  {item.step}
+                </motion.div>
 
-              {/* CONTENT */}
-              <div>
-                <h3 className="text-base md:text-lg font-semibold">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm md:text-base text-neutral-200">
-                  {item.body}
-                </p>
-                {item.meta && (
-                  <p className="mt-2 text-xs md:text-sm text-yellow-300">
-                    {item.meta}
+                <div>
+                  <h3 className="text-base md:text-lg font-semibold">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm md:text-base text-neutral-200">
+                    {item.body}
                   </p>
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+                  {item.meta && (
+                    <p className="mt-2 text-xs md:text-sm text-yellow-300">
+                      {item.meta}
+                    </p>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.section>
+
+        {/* Who can nominate */}
         <motion.section
           className="mt-20 grid gap-10 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] items-start"
           initial="hidden"

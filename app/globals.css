@@ -123,3 +123,19 @@
     font-family: var(--font-raleway), sans-serif;
   }
 }
+
+.parallax-height {
+  height: 350vh;
+}
+
+@media (max-width: 1000px) {
+  .parallax-height {
+    height: 300vh !important;
+  }
+}
+
+@media (min-width: 1800px) {
+  .parallax-height {
+    height: 300vh !important;
+  }
+}

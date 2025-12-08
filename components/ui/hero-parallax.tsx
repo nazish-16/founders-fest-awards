@@ -73,7 +73,7 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
     <>
       <div
         ref={ref}
-        className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-black"
+        className="parallax-height py-24 md:py-28 lg:py-32 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-black"
       >
         <Header />
         <motion.div
@@ -177,7 +177,6 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
 export const Header = () => {
   return (
     <div className="max-w-8xl mx-auto relative w-full flex flex-col xl:flex-row xl:items-center xl:justify-center gap-12 xl:gap-16 px-4 xl:px-8">
-      {/* LEFT CONTENT */}
       <motion.div
         initial={{ opacity: 0, x: -24 }}
         animate={{ opacity: 1, x: 0 }}
@@ -187,6 +186,7 @@ export const Header = () => {
         <h1 className="text-4xl xl:text-7xl font-bold text-white leading-tight whitespace-nowrap">
           Founders Fest Awards
         </h1>
+
         <p className="max-w-2xl text-base xl:text-xl mt-8 text-neutral-200">
           A tribute to the dreamers who build through uncertainty, push through
           long nights, and carry the unshakeable belief that their ideas can
@@ -205,11 +205,7 @@ export const Header = () => {
           generation of founders to rise.
         </p>
       </motion.div>
-
-      {/* BIG DIVIDER */}
       <div className="hidden xl:block w-px h-96 bg-linear-to-b from-transparent via-white/30 to-transparent mx-4 shrink-0" />
-
-      {/* RIGHT CONTENT - IMAGES */}
       <motion.div
         initial={{ opacity: 0, x: 24 }}
         animate={{ opacity: 1, x: 0 }}
@@ -222,9 +218,12 @@ export const Header = () => {
             alt="Logo 1"
             width={200}
             height={200}
-            className="h-60 w-60 hidden xl:flex xl:h-60 xl:w-60 object-contain opacity-90 hover:opacity-100 transition"
+            className="h-60 w-60 hidden xl:flex object-contain opacity-90 hover:opacity-100 transition"
           />
         </div>
+        <p className="hidden xl:block text-white/70 font-semibold text-sm uppercase tracking-widest my-2">
+          BROUGHT TO YOU BY
+        </p>
         <div className="flex flex-col items-center">
           <Image
             src="/assets/logo2.png"
@@ -233,7 +232,7 @@ export const Header = () => {
             height={200}
             className="h-60 w-60 xl:h-60 xl:w-60 object-contain opacity-90 hover:opacity-100 transition"
           />
-          <p className="text-white/90 font-bold text-xs xl:hidden uppercase tracking-wider">
+          <p className="text-white/90 font-bold text-xs xl:hidden uppercase tracking-wider mt-2">
             BROUGHT TO YOU BY
           </p>
         </div>
@@ -241,6 +240,7 @@ export const Header = () => {
     </div>
   );
 };
+
 
 export const ProductCard = ({
   product,

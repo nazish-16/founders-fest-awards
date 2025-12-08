@@ -23,7 +23,7 @@ const CTA = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.1em] text-white/60 backdrop-blur-sm"
+          className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.1rem] text-white/60 backdrop-blur-sm"
         >
           Nominations Now Open
         </motion.span>
@@ -77,7 +77,7 @@ const CTA = () => {
             target="_blank"
             rel="noreferrer"
             whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center justify-center rounded-full bg-yellow-400 px-8 py-3 text-sm md:text-base font-semibold text-black transition"
+            className="inline-flex items-center justify-center rounded-md bg-yellow-400 px-8 py-3 text-sm md:text-base font-semibold text-black transition"
           >
             Nominate
           </motion.a>
