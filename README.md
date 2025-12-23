@@ -1,6 +1,8 @@
-# 🎖 Founders Fest Awards
+# Founders Fest Awards
 
 A cinematic, scroll-driven experience built for **Founders Fest Awards 2025** — celebrating founders, teams, and ecosystem builders who are shaping India’s startup landscape.
+
+Link: https://founders-fest-awards.vercel.app/
 
 This page includes:
 
