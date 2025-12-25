@@ -139,3 +139,12 @@
     height: 300vh !important;
   }
 }
+
+.ig-embed-dark {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.ig-embed-dark img,
+.ig-embed-dark video {
+  filter: invert(1) hue-rotate(180deg);
+}

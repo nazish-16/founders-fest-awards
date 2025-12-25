@@ -3,6 +3,7 @@ import { NavbarDemo } from "@/components/Navbar";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
+import SocialMediaVideos from "@/components/SocialMediaVideos";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <NavbarDemo/>
       <Hero/>
       <About/>
+      <SocialMediaVideos/>
       <CTA/>
       <Footer/>
     </div>

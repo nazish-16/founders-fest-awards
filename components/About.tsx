@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const categories = [
   "Startup of the Year",
@@ -137,6 +138,55 @@ const About = () => {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4">
+        {/* Banner section: single image with title underneath */}
+        <motion.section
+          className="mt-8 mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={staggerContainer}
+        >
+          <motion.div
+            variants={fadeUp}
+            className="relative w-full rounded-3xl overflow-hidden border border-white/20 bg-linear-to-br from-white/5 to-black/20 shadow-2xl"
+          >
+            <div className="relative w-full aspect-21/9 sm:aspect-16/6 md:aspect-21/7">
+              <Image
+                src="/assets/1.jpg"
+                fill
+                alt="Founders Fest Awards 2025"
+                className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+              />
+              {/* Gradient overlay for better text readability */}
+              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
+              {/* Subtle shine effect */}
+              <div className="absolute inset-0 bg-linear-to-t from-transparent via-white/5 to-transparent opacity-50" />
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={fadeUp}
+            transition={{ delay: 0.1 }}
+            className="mt-8 mb-40 text-center"
+          >
+            <motion.h2
+              variants={fadeUp}
+              transition={{ delay: 0.15 }}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+            >
+              Celebrating Builders.
+            </motion.h2>
+            <motion.p
+              variants={fadeUp}
+              transition={{ delay: 0.2 }}
+              className="mt-4 text-base sm:text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed"
+            >
+              A night to honour the teams and founders who turn ideas into impact.
+            </motion.p>
+          </motion.div>
+        </motion.section>
         {/* Intro + Why */}
         <motion.section
           initial="hidden"
@@ -145,7 +195,7 @@ const About = () => {
           variants={staggerContainer}
         >
           <motion.span
-            className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.1em] text-white/60 backdrop-blur-sm"
+            className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-widest text-white/60 backdrop-blur-sm"
             variants={fadeUp}
           >
             Founders Fest Awards
